@@ -1,1 +1,8 @@
-<p>apartament-card works!</p>
+@if (apartment)
+{
+    <p>{{apartment.adres}}</p>
+    <h2 class="listing-heading">{{ apartment.description }}</h2>
+}
+@else {
+    <b>Нет данных</b>
+}

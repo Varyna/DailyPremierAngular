@@ -1,5 +1,5 @@
-
-<app-apartament-card></app-apartament-card>
-<pre>
-  {{items[0].Adres}}
-</pre>
+@for(apartment of apartaments; track apartment.id)
+{ 
+  <app-apartament-card  [apartment]="apartment" ></app-apartament-card>  
+}
+ 

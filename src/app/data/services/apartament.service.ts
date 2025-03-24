@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Apartaments } from '../interfaces/apartaments.interface';
-
+import { Apartment } from '../../data/interfaces/apartment.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +10,6 @@ export class ApartamentService {
   constructor() { }
 
   get(){
-     return this.http.get<Apartaments[]>(`${this.baseApiUrl}/Apartaments/GetItems`)
+     return this.http.get<Apartment[]>(`${this.baseApiUrl}/Apartaments/GetItems`)
   }
 }
